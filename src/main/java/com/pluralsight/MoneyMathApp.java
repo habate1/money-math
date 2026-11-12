@@ -31,10 +31,20 @@ public class MoneyMathApp {
         doubleMoney = 0;
         bigDecMoney = BigDecimal.ZERO;
 
-
-
-
-
+        // iterate 1000 times
+        i = 0;
+        while (i < 1000) {
+            // add 19.
+            floatMoney += 19.99;
+            doubleMoney += 19.99;
+            bigDecMoney = bigDecMoney.add(BigDecimal.valueOf(19.99));
+            i++;
+        }
+        // print final values
+        System.out.println("=== Final values ===");
+        System.out.println("Float variable = " + floatMoney);
+        System.out.println("double variable = " + doubleMoney);
+        System.out.println("big decimal variable = " + bigDecMoney);
     }
 
 }
